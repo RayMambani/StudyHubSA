@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Tshivenda (ve) translations.
+  Provided as a functional starting point for the multi-language requirement —
+  -->
+<resources>
+    <string name="app_name">StudyHub SA</string>
+    <string name="splash_slogan">Guda roṱhe. Aluwa roṱhe.</string>
+
+    <string name="notification_channel_name">Mafhungo a StudyHub SA</string>
+    <string name="notification_channel_description">Zwithu zwiswa, mafhungo a tshigwada, na khumbudzo dza zwa pfunzo</string>
+
+    <string name="login_title">Ro U Ṱanganedza Hafhu</string>
+    <string name="login_subtitle">Dzhena u itela u bvela phanda na lwendo lwau lwa u guda</string>
+    <string name="label_email">Aḓaresi ya email</string>
+    <string name="label_password">Phasiwede</string>
+    <string name="hint_email">iwe@mugudi.ac.za</string>
+    <string name="hint_password">••••••••</string>
+    <string name="forgot_password">Wo hangwa phasiwede?</string>
+    <string name="action_login">Dzhena</string>
+    <string name="or_continue_with">KANA BVELANI PHANDA NGA</string>
+    <string name="action_google_sign_in">Bvela phanda na Google</string>
+    <string name="no_account_yet">Muswa kha StudyHub?</string>
+    <string name="action_create_account">Sika akhaunthi</string>
+
+    <string name="register_title">Sika Akhaunthi</string>
+    <string name="register_subtitle">Ḓivhofhi na vhagudi vha Afrika Tshipembe vhane vha guda roṱhe.</string>
+    <string name="label_full_name">Dzina ḽoṱhe</string>
+    <string name="label_student_number">Nomboro ya mugudi</string>
+    <string name="label_confirm_password">Khwaṱhisedza phasiwede</string>
+    <string name="hint_full_name">tsumbo Makhadzi Mambani</string>
+    <string name="hint_student_number">tsumbo 22045871</string>
+    <string name="hint_confirm_password">Dzhenisani phasiwede hafhu</string>
+    <string name="action_register">Ṅwalisa</string>
+    <string name="already_have_account">No no vha na akhaunthi?</string>
+    <string name="action_go_to_login">Dzhena</string>
+
+    <string name="dashboard_greeting">Ndi matsheloni avhuḓi,</string>
+    <string name="study_streak">Maḓuvha a u guda a sa fheli</string>
+    <string name="upcoming">Zwi ḓaho</string>
+    <string name="your_study_groups">Zwigwada zwau zwa u guda</string>
+    <string name="nav_home">Hayani</string>
+    <string name="nav_library">Bugu</string>
+    <string name="nav_groups">Zwigwada</string>
+    <string name="nav_calendar">Khalenda</string>
+    <string name="nav_profile">Phurofaili</string>
+
+    <string name="resource_library_title">Bugu ya Zwishumiswa</string>
+    <string name="search_resources_hint">Ṱoḓa nga tshifunzwa, tshiṱoho, kana dzina ḽa tshigwada…</string>
+
+    <string name="upload_resource_title">Ise Tshishumiswa Nṱha</string>
+    <string name="label_resource_title">Tshiṱoho tsha tshishumiswa</string>
+    <string name="label_description">Ṱhaluso</string>
+    <string name="label_subject">Tshifunzwa</string>
+    <string name="label_module_code">Khodi ya mudulo</string>
+    <string name="action_choose_file">Kwatelani u nanga faela</string>
+    <string name="file_types_supported">PDF, DOCX, PPTX kana tshifanyiso</string>
+    <string name="action_submit_resource">Rumela Tshishumiswa</string>
+
+    <string name="resource_details_title">Mafhungo a Tshishumiswa</string>
+    <string name="action_download_resource">Dzhenisa tshishumiswa</string>
+    <string name="comments">Zwiṱaliwa</string>
+
+    <string name="study_groups_title">Zwigwada Zwa U Guda</string>
+    <string name="search_groups_hint">Ṱoḓa tshigwada nga tshifunzwa…</string>
+    <string name="action_join">Ḓivhofhi</string>
+    <string name="action_create_group">Sika tshigwada</string>
+
+    <string name="message_hint">Rumela mulaedza kha tshigwada…</string>
+
+    <string name="academic_calendar_title">Khalenda ya Pfunzo</string>
+
+    <string name="notifications_title">Ndivhiso</string>
+
+    <string name="profile_title">Phurofaili</string>
+    <string name="achievement_badges">Zwiswa zwa mvelaphanda</string>
+
+    <string name="settings_title">Ndugiselelo</string>
+    <string name="setting_language">Luambo</string>
+    <string name="setting_notifications">Ndivhiso</string>
+    <string name="setting_theme">Mbonalo</string>
+    <string name="setting_privacy">Tshiphiri</string>
+    <string name="setting_account_security">Tsireledzo ya akhaunthi</string>
+    <string name="action_logout">Bva</string>
+    <string name="choose_language">Nanga luambo</string>
+
+    <string name="offline_notes_title">Zwirekodo Zwi Sa Xhunwaho</string>
+    <string name="offline_mode_badge">Muyo u sa xhunwaho</string>
+    <string name="new_note_title_hint">Tshiṱoho tsha luṅwalo</string>
+    <string name="new_note_content_hint">Ṅwalani luṅwalo lwaṋu…</string>
+    <string name="action_save_note">Vhulunga luṅwalo</string>
+    <string name="status_synced">Zwo linganyiswa</string>
+    <string name="status_pending_sync">Zwi tshi lindela u linganyiswa</string>
+    <string name="offline_sync_notice">Zwirekodo zwi ḓo linganyiswa nga phanḓa musi no dovha na xhunwa.</string>
+
+    <string name="stat_uploads">Zwo iswaho</string>
+    <string name="stat_groups">Zwigwada</string>
+    <string name="stat_points">Points</string>
+    <string name="no_badges_yet">A hu na zwiswa zwa mvelaphanda zwino — thomani u isa zwishumiswa na u ḓivhofha zwigwada u itela u zwi wana.</string>
+
+    <string name="choose_theme">Nanga mbonalo</string>
+    <string name="choose_privacy">Tshiphiri tsha phurofaili</string>
+    <string name="privacy_public">Phurofaili ya vhoṱhe</string>
+    <string name="privacy_private">Phurofaili ya tshiphiri</string>
+
+    <string name="change_password_title">Shandukisa Phasiwede</string>
+    <string name="label_current_password">Phasiwede ya zwino</string>
+    <string name="label_new_password">Phasiwede ntswa</string>
+    <string name="action_update_password">Vhuedza Phasiwede</string>
+    <string name="password_updated">Phasiwede yo vhuedzwa</string>
+
+    <string name="add_event_title">Engedza Tshiitea</string>
+    <string name="label_event_title">Tshiṱoho tsha tshiitea</string>
+    <string name="label_event_date">Kwatelani u nanga ḓuvha</string>
+    <string name="label_event_time">Kwatelani u nanga tshifhinga (nga u tou funa)</string>
+    <string name="action_add_event">Engedza Tshiitea</string>
+    <string name="no_upcoming_events">A hu na zwiitea zwi ḓaho zwino — kwatelani u+ u itela u engedza.</string>
+
+    <string name="no_notifications">No lugela zwoṱhe — a hu na ndivhiso zwino.</string>
+
+    <string name="edit_profile_title">Khwinisa Phurofaili</string>
+    <string name="action_save_profile">Vhulunga Zwe wa Shandula</string>
+
+    <string name="download_started">U dzhenisa ho thoma — sedzani ndivhiso yaṋu</string>
+
+    <string name="ai_assist_title">Thuso ya u Guda ya AI</string>
+    <string name="ai_assist_disclaimer">I shumisa logic ya kha thembulusi, hu si modele ya AI yo xhunwaho, u swika hu tshi vhewa khodo ya API kha server.</string>
+    <string name="ai_summarize_title">Sika tshifinyiswa tsha u guda</string>
+    <string name="ai_summarize_hint">Dzhenisani zwiṅwalwa zwaṋu kana phara hafha…</string>
+    <string name="action_summarize">Finyeza</string>
+    <string name="ai_ask_title">Vhudzisani mbudziso ya pfunzo</string>
+    <string name="ai_ask_hint">tsumbo Ndi mini luṅwalo lwo tanganelanaho?</string>
+    <string name="ai_recommendations_title">Themendelo dza u guda</string>
+    <string name="action_get_recommendations">Wanani themendelo</string>
+</resources>

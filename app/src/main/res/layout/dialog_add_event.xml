@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/etEventTitle"
+        style="@style/InputField"
+        android:hint="@string/label_event_title"/>
+
+    <EditText
+        android:id="@+id/etEventDate"
+        style="@style/InputField"
+        android:layout_marginTop="12dp"
+        android:focusable="false"
+        android:hint="@string/label_event_date"/>
+
+    <EditText
+        android:id="@+id/etEventTime"
+        style="@style/InputField"
+        android:layout_marginTop="12dp"
+        android:focusable="false"
+        android:hint="@string/label_event_time"/>
+
+</LinearLayout>

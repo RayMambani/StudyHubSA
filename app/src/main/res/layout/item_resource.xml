@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/bg_card"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="13dp">
+
+    <ImageView
+        android:layout_width="40dp" android:layout_height="40dp"
+        android:padding="10dp"
+        android:background="@drawable/bg_pill_primary"
+        android:src="@drawable/ic_book"/>
+
+    <LinearLayout
+        android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+        android:layout_marginStart="12dp" android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvResourceTitle"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:maxLines="1" android:ellipsize="end"
+            android:textColor="@color/ink" android:textSize="13.5sp" android:textStyle="bold"
+            tools:text="Intro to Data Structures — Ch.4"/>
+        <TextView
+            android:id="@+id/tvResourceMeta"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/muted" android:textSize="11.5sp"
+            tools:text="COMS2A · PDF"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btnDownload"
+        android:layout_width="18dp" android:layout_height="18dp"
+        android:src="@drawable/ic_download"/>
+</LinearLayout>

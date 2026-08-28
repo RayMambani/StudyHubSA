@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center_vertical" android:orientation="horizontal" android:layout_marginBottom="16dp">
+            <ImageView android:id="@+id/btnBack" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_back"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginStart="14dp" android:text="@string/resource_details_title"
+                android:textColor="@color/ink" android:textSize="19sp" android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_card" android:orientation="vertical" android:padding="16dp">
+            <TextView
+                android:id="@+id/tvModule"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:background="@drawable/bg_pill_primary" android:paddingHorizontal="10dp" android:paddingVertical="4dp"
+                android:textColor="@color/primary" android:textSize="10.5sp" android:textStyle="bold"
+                tools:text="COMS2A"/>
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" android:textColor="@color/ink" android:textSize="16.5sp" android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:textColor="@color/muted" android:textSize="12.5sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="18dp" android:text="Preview"
+            android:textColor="@color/ink" android:textSize="14sp" android:textStyle="bold"/>
+        <LinearLayout
+            android:id="@+id/previewBox"
+            android:layout_width="match_parent" android:layout_height="200dp"
+            android:layout_marginTop="10dp" android:background="@drawable/bg_card" android:backgroundTint="@color/paper"
+            android:gravity="center" android:padding="14dp">
+            <ImageView android:id="@+id/ivPreviewPlaceholder" android:layout_width="34dp" android:layout_height="34dp" android:src="@drawable/ic_book"/>
+            <ScrollView
+                android:id="@+id/svPreviewText"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/tvPreviewText"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/ink" android:textSize="12sp" android:fontFamily="monospace"/>
+            </ScrollView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnDownload"
+            style="@style/PrimaryButton"
+            android:layout_marginTop="18dp"
+            android:text="@string/action_download_resource"/>
+
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="22dp" android:text="@string/comments"
+            android:textColor="@color/ink" android:textSize="14sp" android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/commentsContainer"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:orientation="vertical"/>
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" android:gravity="center_vertical" android:orientation="horizontal">
+            <EditText
+                android:id="@+id/etNewComment"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:background="@drawable/bg_input_field" android:hint="@string/hint_add_comment"
+                android:padding="11dp" android:textSize="13sp"/>
+            <ImageView
+                android:id="@+id/btnPostComment"
+                android:layout_width="38dp" android:layout_height="38dp"
+                android:layout_marginStart="8dp" android:padding="10dp"
+                android:background="@drawable/bg_circle_primary" android:src="@drawable/ic_send"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

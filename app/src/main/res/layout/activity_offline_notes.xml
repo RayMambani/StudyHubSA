@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:gravity="center_vertical" android:orientation="horizontal" android:padding="20dp">
+        <ImageView android:id="@+id/btnBack" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_back"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:layout_marginStart="14dp" android:text="@string/offline_notes_title"
+            android:textColor="@color/ink" android:textSize="19sp" android:textStyle="bold"/>
+        <ImageView android:id="@+id/btnAddNote" android:layout_width="34dp" android:layout_height="34dp"
+            android:padding="8dp" android:background="@drawable/bg_card" android:src="@drawable/ic_add"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvConnectivityBadge"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginStart="20dp" android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_pill_primary" android:backgroundTint="@color/gold_tint"
+        android:paddingHorizontal="12dp" android:paddingVertical="6dp"
+        android:text="@string/offline_mode_badge" android:textColor="#9C6F14" android:textSize="10.5sp" android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNotes"
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingHorizontal="20dp"
+        android:paddingBottom="12dp"/>
+
+    <TextView
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_pill_primary"
+        android:padding="13dp" android:text="@string/offline_sync_notice"
+        android:textColor="@color/primary" android:textSize="11.5sp" android:gravity="center"/>
+
+</LinearLayout>

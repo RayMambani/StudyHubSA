@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">StudyHub SA</string>
+    <string name="splash_slogan">Learn together. Grow together.</string>
+
+    <!-- Google Sign-In: replace with your OAuth 2.0 Web Client ID from Google Cloud Console -->
+    <string name="default_web_client_id">639761337599-3a1ecmcp3ghnddr0be8j667v150bsvh7.apps.googleusercontent.com</string>
+
+    <string name="notification_channel_id">studyhub_notifications</string>
+    <string name="notification_channel_name">StudyHub SA Updates</string>
+    <string name="notification_channel_description">New resources, group messages, and academic reminders</string>
+
+    <!-- Login -->
+    <string name="login_title">Welcome back</string>
+    <string name="login_subtitle">Sign in to continue your study journey</string>
+    <string name="label_email">Email address</string>
+    <string name="label_password">Password</string>
+    <string name="hint_email">you@student.ac.za</string>
+    <string name="hint_password">••••••••</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="action_login">Log In</string>
+    <string name="or_continue_with">OR CONTINUE WITH</string>
+    <string name="action_google_sign_in">Continue with Google</string>
+    <string name="no_account_yet">New to StudyHub?</string>
+    <string name="action_create_account">Create account</string>
+
+    <!-- Register -->
+    <string name="register_title">Create account</string>
+    <string name="register_subtitle">Join students across South Africa learning together.</string>
+    <string name="label_full_name">Full name</string>
+    <string name="label_student_number">Student number</string>
+    <string name="label_confirm_password">Confirm password</string>
+    <string name="hint_full_name">e.g. Makhadzi Mambani</string>
+    <string name="hint_student_number">e.g. 22045871</string>
+    <string name="hint_confirm_password">Re-enter password</string>
+    <string name="action_register">Register</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="action_go_to_login">Log in</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_greeting">Good afternoon,</string>
+    <string name="study_streak">Study streak</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="your_study_groups">Your study groups</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_library">Library</string>
+    <string name="nav_groups">Groups</string>
+    <string name="nav_calendar">Calendar</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Resource Library -->
+    <string name="resource_library_title">Resource Library</string>
+    <string name="search_resources_hint">Search by module, title, subject…</string>
+
+    <!-- Upload -->
+    <string name="upload_resource_title">Upload Resource</string>
+    <string name="label_resource_title">Resource title</string>
+    <string name="label_description">Description</string>
+    <string name="label_subject">Subject</string>
+    <string name="label_module_code">Module code</string>
+    <string name="action_choose_file">Tap to choose a file</string>
+    <string name="file_types_supported">PDF, DOCX, PPTX or image</string>
+    <string name="action_submit_resource">Submit Resource</string>
+
+    <!-- Resource details -->
+    <string name="resource_details_title">Resource Details</string>
+    <string name="action_download_resource">Download resource</string>
+    <string name="comments">Comments</string>
+    <string name="hint_add_comment">Add a comment…</string>
+
+    <!-- Study groups -->
+    <string name="study_groups_title">Study Groups</string>
+    <string name="search_groups_hint">Search groups by module…</string>
+    <string name="action_join">Join</string>
+    <string name="action_create_group">Create group</string>
+
+    <!-- Chat -->
+    <string name="message_hint">Message the group…</string>
+
+    <!-- Calendar -->
+    <string name="academic_calendar_title">Academic Calendar</string>
+
+    <!-- Notifications -->
+    <string name="notifications_title">Notifications</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Profile</string>
+    <string name="achievement_badges">Achievement badges</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="setting_language">Language</string>
+    <string name="setting_notifications">Notifications</string>
+    <string name="setting_theme">Theme</string>
+    <string name="setting_privacy">Privacy</string>
+    <string name="setting_account_security">Account security</string>
+    <string name="action_logout">Log out</string>
+    <string name="choose_language">Choose language</string>
+
+    <!-- Offline notes -->
+    <string name="offline_notes_title">Offline Notes</string>
+    <string name="offline_mode_badge">Offline mode</string>
+    <string name="new_note_title_hint">Note title</string>
+    <string name="new_note_content_hint">Write your note…</string>
+    <string name="action_save_note">Save note</string>
+    <string name="status_synced">Synced</string>
+    <string name="status_pending_sync">Pending sync</string>
+    <string name="offline_sync_notice">Notes will sync automatically once you\'re back online.</string>
+
+    <!-- Profile stats & badges -->
+    <string name="stat_uploads">Uploads</string>
+    <string name="stat_groups">Groups</string>
+    <string name="stat_points">Points</string>
+    <string name="no_badges_yet">No badges yet — start uploading resources and joining groups to earn them.</string>
+
+    <!-- Theme & Privacy -->
+    <string name="choose_theme">Choose theme</string>
+    <string name="choose_privacy">Profile privacy</string>
+    <string name="privacy_public">Public profile</string>
+    <string name="privacy_private">Private profile</string>
+
+    <!-- Change password -->
+    <string name="change_password_title">Change Password</string>
+    <string name="label_current_password">Current password</string>
+    <string name="label_new_password">New password</string>
+    <string name="action_update_password">Update Password</string>
+    <string name="password_updated">Password updated</string>
+
+    <!-- Calendar -->
+    <string name="add_event_title">Add Event</string>
+    <string name="label_event_title">Event title</string>
+    <string name="label_event_date">Tap to choose a date</string>
+    <string name="label_event_time">Tap to choose a time (optional)</string>
+    <string name="action_add_event">Add Event</string>
+    <string name="no_upcoming_events">No upcoming events yet — tap + to add one.</string>
+
+    <!-- Notifications -->
+    <string name="no_notifications">You\'re all caught up — no notifications yet.</string>
+
+    <!-- Edit profile -->
+    <string name="edit_profile_title">Edit Profile</string>
+    <string name="action_save_profile">Save Changes</string>
+    <string name="action_change_photo">Change photo</string>
+
+    <!-- Downloads -->
+    <string name="download_started">Download started — check your notification shade</string>
+
+    <!-- AI Study Assist -->
+    <string name="ai_assist_title">AI Study Assist</string>
+    <string name="ai_assist_disclaimer">Powered by Google Gemini when available, with a built-in fallback if the connection ever fails.</string>
+    <string name="ai_summarize_title">Generate a study summary</string>
+    <string name="ai_summarize_hint">Paste your notes or a passage here…</string>
+    <string name="action_summarize">Summarize</string>
+    <string name="ai_ask_title">Ask an academic question</string>
+    <string name="ai_ask_hint">e.g. What is a linked list?</string>
+    <string name="ai_recommendations_title">Study recommendations</string>
+    <string name="action_get_recommendations">Get recommendations</string>
+
+</resources>

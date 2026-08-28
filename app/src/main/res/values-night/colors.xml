@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dark theme palette, used automatically when Settings > Theme is set to
+     Dark (or System default while the device is in dark mode). Every layout
+     already references these @color names, so this file alone re-themes
+     the whole app. -->
+<resources>
+    <color name="bg">#14181D</color>
+    <color name="paper">#1B2027</color>
+    <color name="ink">#F0EFEA</color>
+    <color name="primary">#4C7AB0</color>
+    <color name="primary_dark">#2E4E70</color>
+    <color name="primary_tint">#1D2A36</color>
+    <color name="green">#54C468</color>
+    <color name="green_tint">#173322</color>
+    <color name="gold">#E8B650</color>
+    <color name="gold_tint">#332812</color>
+    <color name="surface">#1E242B</color>
+    <color name="line">#333A42</color>
+    <color name="muted">#9AA3AC</color>
+    <color name="danger">#E07059</color>
+    <color name="white">#FFFFFF</color>
+</resources>

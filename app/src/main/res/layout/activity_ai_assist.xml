@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center_vertical" android:orientation="horizontal" android:layout_marginBottom="20dp">
+            <ImageView android:id="@+id/btnBack" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_back"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginStart="14dp" android:text="@string/ai_assist_title"
+                android:textColor="@color/ink" android:textSize="19sp" android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Study summaries -->
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/ai_summarize_title" android:textColor="@color/ink" android:textSize="14.5sp" android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/etSummarizeInput"
+            style="@style/InputField"
+            android:layout_marginTop="8dp"
+            android:minLines="4" android:gravity="top" android:inputType="textMultiLine"
+            android:hint="@string/ai_summarize_hint"/>
+        <Button android:id="@+id/btnSummarize" style="@style/SecondaryButton" android:layout_marginTop="8dp" android:text="@string/action_summarize"/>
+        <TextView
+            android:id="@+id/tvSummaryResult"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" android:background="@drawable/bg_card" android:padding="12dp"
+            android:textColor="@color/ink" android:textSize="12.5sp" android:visibility="gone"/>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/line" android:layout_marginVertical="22dp"/>
+
+        <!-- Ask academic questions -->
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/ai_ask_title" android:textColor="@color/ink" android:textSize="14.5sp" android:textStyle="bold"/>
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:gravity="center_vertical" android:orientation="horizontal">
+            <EditText
+                android:id="@+id/etQuestion"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:background="@drawable/bg_input_field" android:padding="12dp" android:textSize="13sp"
+                android:hint="@string/ai_ask_hint"/>
+            <ImageView
+                android:id="@+id/btnAsk"
+                android:layout_width="38dp" android:layout_height="38dp"
+                android:layout_marginStart="8dp" android:padding="10dp"
+                android:background="@drawable/bg_circle_primary" android:src="@drawable/ic_send"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvAskResult"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" android:background="@drawable/bg_card" android:padding="12dp"
+            android:textColor="@color/ink" android:textSize="12.5sp" android:visibility="gone"/>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/line" android:layout_marginVertical="22dp"/>
+
+        <!-- Study recommendations -->
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/ai_recommendations_title" android:textColor="@color/ink" android:textSize="14.5sp" android:textStyle="bold"/>
+        <Button android:id="@+id/btnGetRecommendations" style="@style/SecondaryButton" android:layout_marginTop="8dp" android:text="@string/action_get_recommendations"/>
+        <LinearLayout
+            android:id="@+id/recommendationsContainer"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" android:orientation="vertical"/>
+
+    </LinearLayout>
+</ScrollView>

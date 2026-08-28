@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center_vertical" android:orientation="horizontal" android:layout_marginBottom="18dp">
+            <ImageView android:id="@+id/btnBack" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_back"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginStart="14dp" android:text="@string/upload_resource_title"
+                android:textColor="@color/ink" android:textSize="19sp" android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView style="@style/FieldLabel" android:text="@string/label_resource_title"/>
+        <EditText android:id="@+id/etTitle" style="@style/InputField" android:layout_marginTop="6dp" android:layout_marginBottom="14dp" android:hint="e.g. Week 6 Tutorial Notes"/>
+
+        <TextView style="@style/FieldLabel" android:text="@string/label_description"/>
+        <EditText android:id="@+id/etDescription" style="@style/InputField" android:layout_marginTop="6dp" android:layout_marginBottom="14dp" android:hint="Brief summary of the resource"/>
+
+        <TextView style="@style/FieldLabel" android:text="@string/label_subject"/>
+        <EditText android:id="@+id/etSubject" style="@style/InputField" android:layout_marginTop="6dp" android:layout_marginBottom="14dp" android:text="Computer Science"/>
+
+        <TextView style="@style/FieldLabel" android:text="@string/label_module_code"/>
+        <EditText android:id="@+id/etModule" style="@style/InputField" android:layout_marginTop="6dp" android:layout_marginBottom="18dp" android:hint="e.g. COMS2A"/>
+
+        <LinearLayout
+            android:id="@+id/filePicker"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_input_field" android:gravity="center"
+            android:orientation="vertical" android:padding="26dp" android:layout_marginBottom="14dp">
+            <ImageView android:layout_width="26dp" android:layout_height="26dp" android:src="@drawable/ic_upload"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:text="@string/action_choose_file"
+                android:textColor="@color/primary" android:textStyle="bold" android:textSize="12.5sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="3dp" android:text="@string/file_types_supported"
+                android:textColor="@color/muted" android:textSize="11sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvSelectedFile"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_card" android:padding="12dp"
+            android:textColor="@color/ink" android:textSize="12.5sp" android:textStyle="bold"
+            android:visibility="gone" android:layout_marginBottom="18dp"/>
+
+        <Button android:id="@+id/btnSubmit" style="@style/PrimaryButton" android:text="@string/action_submit_resource"/>
+
+        <ProgressBar android:id="@+id/progressBar" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:layout_marginTop="12dp" android:visibility="gone"/>
+
+    </LinearLayout>
+</ScrollView>

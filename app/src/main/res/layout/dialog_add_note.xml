@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/etNoteTitle"
+        style="@style/InputField"
+        android:hint="@string/new_note_title_hint"/>
+
+    <EditText
+        android:id="@+id/etNoteContent"
+        style="@style/InputField"
+        android:layout_marginTop="12dp"
+        android:minLines="4"
+        android:gravity="top"
+        android:hint="@string/new_note_content_hint"
+        android:inputType="textMultiLine"/>
+
+</LinearLayout>

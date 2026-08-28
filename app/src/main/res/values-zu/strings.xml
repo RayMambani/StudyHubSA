@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  isiZulu (zu) translations.
+  Provided as a functional starting point for the multi-language requirement —
+ -->
+<resources>
+    <string name="app_name">StudyHub SA</string>
+    <string name="splash_slogan">Funda ndawonye. Khula ndawonye.</string>
+
+    <string name="notification_channel_name">Izibuyekezo ze-StudyHub SA</string>
+    <string name="notification_channel_description">Izinsiza ezintsha, imilayezo yeqembu, nezikhumbuzo zezifundo</string>
+
+    <string name="login_title">Siyakwamukela futhi</string>
+    <string name="login_subtitle">Ngena ukuze uqhubeke nohambo lwakho lokufunda</string>
+    <string name="label_email">Ikheli le-imeyili</string>
+    <string name="label_password">Iphasiwedi</string>
+    <string name="hint_email">wena@umfundi.ac.za</string>
+    <string name="hint_password">••••••••</string>
+    <string name="forgot_password">Ukhohlwe iphasiwedi?</string>
+    <string name="action_login">Ngena</string>
+    <string name="or_continue_with">NOMA QHUBEKA NGE</string>
+    <string name="action_google_sign_in">Qhubeka nge-Google</string>
+    <string name="no_account_yet">Umusha ku-StudyHub?</string>
+    <string name="action_create_account">Yenza i-akhawunti</string>
+
+    <string name="register_title">Yenza i-akhawunti</string>
+    <string name="register_subtitle">Joyina abafundi bezwe lonke laseNingizimu Afrika befunda bonke.</string>
+    <string name="label_full_name">Igama eliphelele</string>
+    <string name="label_student_number">Inombolo yomfundi</string>
+    <string name="label_confirm_password">Qinisekisa iphasiwedi</string>
+    <string name="hint_full_name">isb. Makhadzi Mambani</string>
+    <string name="hint_student_number">isb. 22045871</string>
+    <string name="hint_confirm_password">Faka kabusha iphasiwedi</string>
+    <string name="action_register">Bhalisa</string>
+    <string name="already_have_account">Usunayo i-akhawunti?</string>
+    <string name="action_go_to_login">Ngena</string>
+
+    <string name="dashboard_greeting">Sawubona,</string>
+    <string name="study_streak">Izinsuku zokufunda ezilandelanayo</string>
+    <string name="upcoming">Okuzayo</string>
+    <string name="your_study_groups">Amaqembu akho okufunda</string>
+    <string name="nav_home">Ikhaya</string>
+    <string name="nav_library">Umtapo</string>
+    <string name="nav_groups">Amaqembu</string>
+    <string name="nav_calendar">Ikhalenda</string>
+    <string name="nav_profile">Iphrofayela</string>
+
+    <string name="resource_library_title">Umtapo Wezinsiza</string>
+    <string name="search_resources_hint">Sesha ngesifundo, isihloko, noma isihloko esikhulu…</string>
+
+    <string name="upload_resource_title">Layisha Insiza</string>
+    <string name="label_resource_title">Isihloko sensiza</string>
+    <string name="label_description">Incazelo</string>
+    <string name="label_subject">Isifundo</string>
+    <string name="label_module_code">Ikhodi yemojuli</string>
+    <string name="action_choose_file">Thepha ukukhetha ifayela</string>
+    <string name="file_types_supported">PDF, DOCX, PPTX noma isithombe</string>
+    <string name="action_submit_resource">Thumela Insiza</string>
+
+    <string name="resource_details_title">Imininingwane Yensiza</string>
+    <string name="action_download_resource">Dawuniloda insiza</string>
+    <string name="comments">Amazwana</string>
+
+    <string name="study_groups_title">Amaqembu Okufunda</string>
+    <string name="search_groups_hint">Sesha amaqembu ngesifundo…</string>
+    <string name="action_join">Joyina</string>
+    <string name="action_create_group">Dala iqembu</string>
+
+    <string name="message_hint">Layezela iqembu…</string>
+
+    <string name="academic_calendar_title">Ikhalenda Yezemfundo</string>
+
+    <string name="notifications_title">Izaziso</string>
+
+    <string name="profile_title">Iphrofayela</string>
+    <string name="achievement_badges">Amabheji empumelelo</string>
+
+    <string name="settings_title">Izilungiselelo</string>
+    <string name="setting_language">Ulimi</string>
+    <string name="setting_notifications">Izaziso</string>
+    <string name="setting_theme">Indlela yokubukeka</string>
+    <string name="setting_privacy">Ubumfihlo</string>
+    <string name="setting_account_security">Ukuphepha kwe-akhawunti</string>
+    <string name="action_logout">Phuma</string>
+    <string name="choose_language">Khetha ulimi</string>
+
+    <string name="offline_notes_title">Amanothi Angaxhunyiwe</string>
+    <string name="offline_mode_badge">Imodi engaxhunyiwe</string>
+    <string name="new_note_title_hint">Isihloko senothi</string>
+    <string name="new_note_content_hint">Bhala inothi lakho…</string>
+    <string name="action_save_note">Londoloza inothi</string>
+    <string name="status_synced">Kuvunyelaniswe</string>
+    <string name="status_pending_sync">Kulindele ukuvumelaniswa</string>
+    <string name="offline_sync_notice">Amanothi azovumelaniswa ngokuzenzakalela uma usuxhunywe kabusha.</string>
+
+    <string name="stat_uploads">Okulayishiwe</string>
+    <string name="stat_groups">Amaqembu</string>
+    <string name="stat_points">Amaphuzu</string>
+    <string name="no_badges_yet">Awukabi namabheji — qala ngokulayisha izinsiza nokujoyina amaqembu ukuze uwathole.</string>
+
+    <string name="choose_theme">Khetha indlela yokubukeka</string>
+    <string name="choose_privacy">Ubumfihlo bephrofayela</string>
+    <string name="privacy_public">Iphrofayela yomphakathi</string>
+    <string name="privacy_private">Iphrofayela eyimfihlo</string>
+
+    <string name="change_password_title">Shintsha Iphasiwedi</string>
+    <string name="label_current_password">Iphasiwedi yamanje</string>
+    <string name="label_new_password">Iphasiwedi entsha</string>
+    <string name="action_update_password">Buyekeza Iphasiwedi</string>
+    <string name="password_updated">Iphasiwedi ibuyekeziwe</string>
+
+    <string name="add_event_title">Engeza Umcimbi</string>
+    <string name="label_event_title">Isihloko somcimbi</string>
+    <string name="label_event_date">Thinta ukhethe usuku</string>
+    <string name="label_event_time">Thinta ukhethe isikhathi (okukhethekile)</string>
+    <string name="action_add_event">Engeza Umcimbi</string>
+    <string name="no_upcoming_events">Ayikho imimcimbi ezayo — thepha u-+ ukuze wengeze.</string>
+
+    <string name="no_notifications">Akukho okusalele — azikho izaziso okwamanje.</string>
+
+    <string name="edit_profile_title">Hlela Iphrofayela</string>
+    <string name="action_save_profile">Londoloza Izinguquko</string>
+
+    <string name="download_started">Ukudawuniloda kuqalile — bheka isaziso sakho</string>
+
+    <string name="ai_assist_title">Usizo Lokufunda Nge-AI</string>
+    <string name="ai_assist_disclaimer">Kusebenzisa i-logic esesigcinini, hhayi imodeli ye-AI exhunyiwe, kuze kufakwe ukhiye we-API kwiseva.</string>
+    <string name="ai_summarize_title">Dala isifinyezo sokufunda</string>
+    <string name="ai_summarize_hint">Faka amanothi akho noma isigaba lapha…</string>
+    <string name="action_summarize">Finyeza</string>
+    <string name="ai_ask_title">Buza umbuzo wezemfundo</string>
+    <string name="ai_ask_hint">isb. Uyini uhlu oluxhunyiwe?</string>
+    <string name="ai_recommendations_title">Iziphakamiso zokufunda</string>
+    <string name="action_get_recommendations">Thola iziphakamiso</string>
+</resources>

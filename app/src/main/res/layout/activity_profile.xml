@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <ScrollView
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:layout_marginBottom="56dp">
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center_vertical" android:orientation="horizontal" android:layout_marginBottom="10dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="@string/profile_title" android:textColor="@color/ink"
+                    android:textSize="19sp" android:textStyle="bold"/>
+                <ImageView android:id="@+id/btnEditProfile" android:layout_width="34dp" android:layout_height="34dp"
+                    android:padding="8dp" android:background="@drawable/bg_card" android:src="@drawable/ic_edit"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center" android:orientation="vertical" android:layout_marginTop="6dp">
+                <FrameLayout
+                    android:layout_width="78dp" android:layout_height="78dp">
+                    <TextView
+                        android:id="@+id/tvInitials"
+                        android:layout_width="78dp" android:layout_height="78dp"
+                        android:background="@drawable/bg_circle_primary" android:gravity="center"
+                        android:textColor="@color/white" android:textSize="26sp" android:textStyle="bold"/>
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivAvatar"
+                        android:layout_width="78dp" android:layout_height="78dp"
+                        android:visibility="gone"/>
+                </FrameLayout>
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" android:textColor="@color/ink" android:textSize="18sp" android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/tvMeta"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/muted" android:textSize="12.5sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="18dp" android:orientation="horizontal">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:layout_marginEnd="4dp" android:background="@drawable/bg_card" android:gravity="center" android:orientation="vertical" android:padding="12dp">
+                    <TextView android:id="@+id/tvUploadsCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/ink" android:textSize="19sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stat_uploads" android:textColor="@color/muted" android:textSize="10.5sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:layout_marginHorizontal="4dp" android:background="@drawable/bg_card" android:gravity="center" android:orientation="vertical" android:padding="12dp">
+                    <TextView android:id="@+id/tvGroupsCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/ink" android:textSize="19sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stat_groups" android:textColor="@color/muted" android:textSize="10.5sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:layout_marginStart="4dp" android:background="@drawable/bg_card" android:gravity="center" android:orientation="vertical" android:padding="12dp">
+                    <TextView android:id="@+id/tvPointsCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/ink" android:textSize="19sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stat_points" android:textColor="@color/muted" android:textSize="10.5sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" android:text="@string/achievement_badges"
+                android:textColor="@color/ink" android:textSize="14sp" android:textStyle="bold"/>
+
+            <GridLayout
+                android:id="@+id/badgesGrid"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" android:columnCount="2"/>
+
+            <LinearLayout
+                android:id="@+id/rowSettings"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="22dp" android:background="@drawable/bg_card"
+                android:gravity="center_vertical" android:orientation="horizontal" android:padding="14dp">
+                <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_settings"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:layout_marginStart="12dp" android:text="@string/settings_title" android:textColor="@color/ink" android:textSize="13.5sp" android:textStyle="bold"/>
+                <ImageView android:layout_width="15dp" android:layout_height="15dp" android:src="@drawable/ic_chevron_right"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rowOfflineNotes"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:background="@drawable/bg_card"
+                android:gravity="center_vertical" android:orientation="horizontal" android:padding="14dp">
+                <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_wifi_off"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:layout_marginStart="12dp" android:text="@string/offline_notes_title" android:textColor="@color/ink" android:textSize="13.5sp" android:textStyle="bold"/>
+                <ImageView android:layout_width="15dp" android:layout_height="15dp" android:src="@drawable/ic_chevron_right"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:itemIconTint="@color/bottom_nav_color" app:itemTextColor="@color/bottom_nav_color"
+        app:menu="@menu/bottom_nav_menu" app:labelVisibilityMode="labeled"
+        android:background="@color/surface"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

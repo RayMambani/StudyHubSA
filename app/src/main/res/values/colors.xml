@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#F5F3ED</color>
+    <color name="paper">#EFEBE0</color>
+    <color name="ink">#1C2430</color>
+    <color name="primary">#1E3A5F</color>
+    <color name="primary_dark">#122A44</color>
+    <color name="primary_tint">#E6EDF4</color>
+    <color name="green">#3FA34D</color>
+    <color name="green_tint">#E5F3E7</color>
+    <color name="gold">#E0A526</color>
+    <color name="gold_tint">#FBF0DA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="line">#DCD6C6</color>
+    <color name="muted">#6B7280</color>
+    <color name="danger">#C2543A</color>
+    <color name="white">#FFFFFF</color>
+</resources>

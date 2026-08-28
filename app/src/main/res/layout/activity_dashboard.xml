@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="56dp"
+        android:clipToPadding="false"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/dashboard_greeting" android:textColor="@color/muted" android:textSize="12sp"/>
+                    <TextView
+                        android:id="@+id/tvGreetingName"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Makhadzi 👋" android:textColor="@color/ink" android:textSize="19sp" android:textStyle="bold"/>
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/btnNotifications"
+                    android:layout_width="38dp" android:layout_height="38dp"
+                    android:padding="9dp"
+                    android:background="@drawable/bg_card"
+                    android:src="@drawable/ic_bell"/>
+            </LinearLayout>
+
+            <!-- Study streak card -->
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_button_primary"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp">
+                <LinearLayout
+                    android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/study_streak" android:textColor="#CFE0F2" android:textSize="11sp"/>
+                    <TextView android:id="@+id/tvStreakDays" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0 days" android:textColor="@color/white" android:textSize="24sp" android:textStyle="bold"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tvTopBadge"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:background="@drawable/bg_pill_primary"
+                    android:backgroundTint="#40E0A526"
+                    android:paddingHorizontal="12dp" android:paddingVertical="6dp"
+                    android:text="Keep going!" android:textColor="#FFD88A" android:textSize="10.5sp" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- AI Study Assist entry point -->
+            <LinearLayout
+                android:id="@+id/cardAiAssist"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="14dp" android:background="@drawable/bg_card"
+                android:gravity="center_vertical" android:orientation="horizontal" android:padding="14dp">
+                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_star" app:tint="@color/green"/>
+                <LinearLayout
+                    android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:layout_marginStart="12dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/ai_assist_title" android:textColor="@color/ink" android:textSize="13.5sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Summaries, Q&amp;A, and study tips" android:textColor="@color/muted" android:textSize="11sp"/>
+                </LinearLayout>
+                <ImageView android:layout_width="15dp" android:layout_height="15dp" android:src="@drawable/ic_chevron_right"/>
+            </LinearLayout>
+
+            <!-- Stats row -->
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="14dp" android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:layout_marginEnd="6dp" android:background="@drawable/bg_card" android:orientation="vertical" android:padding="12dp">
+                    <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_book"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                        android:text="Modules" android:textColor="@color/muted" android:textSize="12sp"/>
+                    <TextView android:id="@+id/tvModulesCount" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0 active" android:textColor="@color/ink" android:textSize="14sp" android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:layout_marginStart="6dp" android:background="@drawable/bg_card" android:orientation="vertical" android:padding="12dp">
+                    <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_upload"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                        android:text="Resources" android:textColor="@color/muted" android:textSize="12sp"/>
+                    <TextView android:id="@+id/tvResourcesCount" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0 shared" android:textColor="@color/ink" android:textSize="14sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="22dp" android:text="@string/upcoming"
+                android:textColor="@color/ink" android:textSize="15sp" android:textStyle="bold"/>
+
+            <LinearLayout android:id="@+id/upcomingContainer"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" android:orientation="vertical"/>
+
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="22dp" android:text="@string/your_study_groups"
+                android:textColor="@color/ink" android:textSize="15sp" android:textStyle="bold"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" android:scrollbars="none">
+                <LinearLayout android:id="@+id/groupsContainer"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:orientation="horizontal"/>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        android:background="@color/surface"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
