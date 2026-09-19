@@ -46,6 +46,10 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         authRepository = AuthRepository(this)
 
+        val isReturning = com.studyhub.sa.data.local.SessionManager(this).hasLoggedInBefore
+        findViewById<android.widget.TextView>(R.id.tvLoginTitle).text =
+            if (isReturning) getString(R.string.login_title) else getString(R.string.login_title_new)
+
         val etEmail = findViewById<EditText>(R.id.etEmail)
         val etPassword = findViewById<EditText>(R.id.etPassword)
         val btnLogin = findViewById<Button>(R.id.btnLogin)

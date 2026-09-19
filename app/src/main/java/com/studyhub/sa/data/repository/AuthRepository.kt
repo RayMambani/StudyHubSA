@@ -49,9 +49,16 @@ class AuthRepository(private val context: Context) {
             session.userId = body.user.id
             session.fullName = body.user.fullName
             session.email = body.user.email
+            session.hasLoggedInBefore = true
             return AuthResult.Success(body.user)
         }
-        val message = response.errorBody()?.string() ?: "Something went wrong (${response.code()})"
+        val rawError = response.errorBody()?.string()
+        val message = try {
+            rawError?.let { org.json.JSONObject(it).optString("error", it) }
+                ?: "Something went wrong (${response.code()})"
+        } catch (e: Exception) {
+            rawError ?: "Something went wrong (${response.code()})"
+        }
         return AuthResult.Error(message)
     }
 

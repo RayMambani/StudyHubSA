@@ -41,6 +41,12 @@ class SessionManager(context: Context) {
 
     val isLoggedIn: Boolean get() = !token.isNullOrEmpty()
 
+    // Persists even after logout, so the Login screen can tell a returning
+    // device from a genuinely first-time one.
+    var hasLoggedInBefore: Boolean
+        get() = prefs.getBoolean(KEY_HAS_LOGGED_IN_BEFORE, false)
+        set(value) = prefs.edit().putBoolean(KEY_HAS_LOGGED_IN_BEFORE, value).apply()
+
     fun clear() = prefs.edit().clear().apply()
 
     companion object {
@@ -48,5 +54,6 @@ class SessionManager(context: Context) {
         private const val KEY_USER_ID = "user_id"
         private const val KEY_FULL_NAME = "full_name"
         private const val KEY_EMAIL = "email"
+        private const val KEY_HAS_LOGGED_IN_BEFORE = "has_logged_in_before"
     }
 }

@@ -101,6 +101,7 @@ data class MessageDto(
     val id: String,
     val group_id: String,
     val sender_id: String,
+    val sender_name: String? = null,
     val content: String,
     val sent_at: String
 )

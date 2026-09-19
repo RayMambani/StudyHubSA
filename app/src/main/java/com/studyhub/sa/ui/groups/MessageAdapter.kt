@@ -40,7 +40,7 @@ class MessageAdapter(private val currentUserId: String?) : RecyclerView.Adapter<
 
             root.gravity = if (isMine) Gravity.END else Gravity.START
             tvSender.visibility = if (isMine) View.GONE else View.VISIBLE
-            tvSender.text = message.sender_id.take(6)
+            tvSender.text = message.sender_name ?: "Student"
             tvBubble.text = message.content
 
             if (isMine) {

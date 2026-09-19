@@ -12,6 +12,7 @@
 
     <!-- Login -->
     <string name="login_title">Welcome back</string>
+    <string name="login_title_new">Welcome</string>
     <string name="login_subtitle">Sign in to continue your study journey</string>
     <string name="label_email">Email address</string>
     <string name="label_password">Password</string>
