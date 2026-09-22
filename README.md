@@ -86,4 +86,4 @@ Check the **Actions** tab on GitHub to see pipeline results.
   a simpler built-in response so the feature never fails outright.
 
 ## YouTube Video Link
-https://youtu.be/cVztaTw0y3U?feature=shared
+https://youtu.be/lwYevaC9lu8?si=5XO9zO81PaagQgic
