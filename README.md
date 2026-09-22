@@ -1,10 +1,10 @@
-# StudyHub SA — Android App
+# StudyHub SA â€” Android App
 
 A mobile learning and collaboration platform for South African college and
 university students, built in Kotlin for Android Studio. StudyHub SA lets
 students manage their academic schedule, share and download study
 resources, collaborate in study groups, chat in real time, and get
-AI-powered study assistance — all backed by a live REST API and database.
+AI-powered study assistance â€” all backed by a live REST API and database.
 
 ## Live backend
 
@@ -14,16 +14,16 @@ Source for the backend lives in a separate repository:
 
 ## Features
 
-- **Authentication** — register and log in with bcrypt-hashed passwords, plus Google Sign-In (SSO)
-- **Settings** — language (English / isiZulu / Tshivenda), light/dark/system theme, notification toggle, profile privacy, account security (password change)
-- **Resource Library** — upload, browse, search, download, and comment on study resources per module
-- **Study Groups** — join or create groups, real-time group chat
-- **Academic Calendar** — add/view events with a native date and time picker
-- **Notifications** — an in-app feed of real activity (new resources, messages, group joins, reminders)
-- **Offline Notes** — create, edit, and read notes fully offline (Room/SQLite); they sync automatically once back online
-- **Profile** — real stats (uploads, groups, points), badges earned from actual activity, login streak, profile picture upload
-- **AI Study Assist** — generate study summaries, ask academic questions, and get personalised study recommendations, powered by Google's Gemini API with an automatic local fallback if Gemini is ever unavailable
-- **Multi-language support** — full UI translation into English, isiZulu, and Tshivenda
+- **Authentication** â€” register and log in with bcrypt-hashed passwords, plus Google Sign-In (SSO)
+- **Settings** â€” language (English / isiZulu / Tshivenda), light/dark/system theme, notification toggle, profile privacy, account security (password change)
+- **Resource Library** â€” upload, browse, search, download, and comment on study resources per module
+- **Study Groups** â€” join or create groups, real-time group chat
+- **Academic Calendar** â€” add/view events with a native date and time picker
+- **Notifications** â€” an in-app feed of real activity (new resources, messages, group joins, reminders)
+- **Offline Notes** â€” create, edit, and read notes fully offline (Room/SQLite); they sync automatically once back online
+- **Profile** â€” real stats (uploads, groups, points), badges earned from actual activity, login streak, profile picture upload
+- **AI Study Assist** â€” generate study summaries, ask academic questions, and get personalised study recommendations, powered by Google's Gemini API with an automatic local fallback if Gemini is ever unavailable
+- **Multi-language support** â€” full UI translation into English, isiZulu, and Tshivenda
 
 ## Tech stack
 
@@ -34,7 +34,7 @@ Source for the backend lives in a separate repository:
 - **Auth:** JWT bearer tokens, Google Sign-In via Firebase
 - **Push notifications:** Firebase Cloud Messaging
 - **Image loading:** Glide
-- **Min SDK:** 24 · **Target SDK:** 34
+- **Min SDK:** 24 Â· **Target SDK:** 34
 
 ## Getting started
 
@@ -76,7 +76,7 @@ Check the **Actions** tab on GitHub to see pipeline results.
 
 ## Known limitations
 
-- The backend runs on Render's free tier, which has **no persistent disk** —
+- The backend runs on Render's free tier, which has **no persistent disk** â€”
   the database and any uploaded files are wiped whenever the server
   restarts or redeploys. This is a hosting constraint, not an app bug.
 - Render's free tier also spins down after 15 minutes of inactivity; the
@@ -85,4 +85,5 @@ Check the **Actions** tab on GitHub to see pipeline results.
   unavailable or a model name is retired, it automatically falls back to
   a simpler built-in response so the feature never fails outright.
 
-## Project structure
+## YouTube Video Link
+https://youtu.be/cVztaTw0y3U?feature=shared
