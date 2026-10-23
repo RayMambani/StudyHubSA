@@ -30,7 +30,7 @@
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="@string/dashboard_greeting" android:textColor="@color/muted" android:textSize="12sp"/>
+                        android:id="@+id/tvGreeting" android:text="@string/dashboard_greeting" android:textColor="@color/muted" android:textSize="12sp"/>
                     <TextView
                         android:id="@+id/tvGreetingName"
                         android:layout_width="wrap_content" android:layout_height="wrap_content"

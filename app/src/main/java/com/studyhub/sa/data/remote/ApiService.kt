@@ -101,4 +101,7 @@ interface ApiService {
 
     @GET("api/ai/recommendations")
     suspend fun getRecommendations(): Response<RecommendationsResponse>
+
+    @POST("api/users/delete-account")
+    suspend fun deleteAccount(@Body body: DeleteAccountRequest): Response<Map<String, Boolean>>
 }

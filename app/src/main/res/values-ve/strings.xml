@@ -132,4 +132,7 @@
     <string name="ai_ask_hint">tsumbo Ndi mini luṅwalo lwo tanganelanaho?</string>
     <string name="ai_recommendations_title">Themendelo dza u guda</string>
     <string name="action_get_recommendations">Wanani themendelo</string>
+    <string name="greeting_morning">Ndi matsheloni,</string>
+    <string name="greeting_afternoon">Ndi masiari,</string>
+    <string name="greeting_evening">Ndi madekwana,</string>
 </resources>

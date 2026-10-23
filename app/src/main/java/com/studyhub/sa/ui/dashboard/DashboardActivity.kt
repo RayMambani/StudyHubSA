@@ -48,9 +48,20 @@ class DashboardActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        updateGreeting()
         loadProfileStats()
         loadUpcomingEvents()
         loadGroupsAndResources()
+    }
+
+    private fun updateGreeting() {
+        val hour = java.util.Calendar.getInstance().get(java.util.Calendar.HOUR_OF_DAY)
+        val greeting = when (hour) {
+            in 5..11 -> R.string.greeting_morning
+            in 12..16 -> R.string.greeting_afternoon
+            else -> R.string.greeting_evening
+        }
+        findViewById<TextView>(R.id.tvGreeting).setText(greeting)
     }
 
     private fun loadProfileStats() {

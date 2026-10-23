@@ -2,28 +2,34 @@ package com.studyhub.sa.ui.settings
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.InputType
+import android.view.Gravity
+import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.LinearLayout
 import android.widget.Switch
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import com.studyhub.sa.R
 import com.studyhub.sa.auth.GoogleSignInHelper
 import com.studyhub.sa.auth.LoginActivity
+import com.studyhub.sa.data.local.AppDatabase
 import com.studyhub.sa.data.local.SessionManager
 import com.studyhub.sa.data.remote.RetrofitClient
+import com.studyhub.sa.data.remote.dto.DeleteAccountRequest
 import com.studyhub.sa.data.remote.dto.SettingsUpdateRequest
 import com.studyhub.sa.util.LocaleHelper
 import com.studyhub.sa.util.NotificationPrefs
 import com.studyhub.sa.util.ThemeHelper
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
-/**
- * Screen 13: Settings Screen — every row here does something real:
- * language switch, notification toggle, theme switch (actually recolors
- * the app via values-night), profile privacy (synced to the backend), and
- * account security (real password change).
- */
+/** Screen 13: Settings. Every row does something real, including permanent account deletion. */
 class SettingsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,19 +46,9 @@ class SettingsActivity : AppCompatActivity() {
         tvCurrentPrivacy.text = getString(R.string.privacy_public)
 
         findViewById<android.view.View>(R.id.btnBack).setOnClickListener { finish() }
-
-        findViewById<android.view.View>(R.id.rowLanguage).setOnClickListener {
-            showLanguagePicker(tvCurrentLanguage)
-        }
-
-        findViewById<android.view.View>(R.id.rowTheme).setOnClickListener {
-            showThemePicker(tvCurrentTheme)
-        }
-
-        findViewById<android.view.View>(R.id.rowPrivacy).setOnClickListener {
-            showPrivacyPicker(tvCurrentPrivacy)
-        }
-
+        findViewById<android.view.View>(R.id.rowLanguage).setOnClickListener { showLanguagePicker(tvCurrentLanguage) }
+        findViewById<android.view.View>(R.id.rowTheme).setOnClickListener { showThemePicker(tvCurrentTheme) }
+        findViewById<android.view.View>(R.id.rowPrivacy).setOnClickListener { showPrivacyPicker(tvCurrentPrivacy) }
         findViewById<android.view.View>(R.id.rowSecurity).setOnClickListener {
             startActivity(Intent(this, ChangePasswordActivity::class.java))
         }
@@ -66,13 +62,80 @@ class SettingsActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.btnLogout).setOnClickListener {
             SessionManager(this).clear()
             GoogleSignInHelper.signOut(this)
-            startActivity(Intent(this, LoginActivity::class.java).apply {
-                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            })
-            finish()
+            goToLogin()
         }
 
+        addDeleteAccountRow()
         loadRemotePrivacy(tvCurrentPrivacy)
+    }
+
+    private fun goToLogin() {
+        startActivity(Intent(this, LoginActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        })
+        finish()
+    }
+
+    /** Adds a "Delete account" link directly under "Log out". */
+    private fun addDeleteAccountRow() {
+        val logout = findViewById<TextView>(R.id.btnLogout)
+        val parent = logout.parent as ViewGroup
+        val pad = (14 * resources.displayMetrics.density).toInt()
+        val delete = TextView(this).apply {
+            text = "Delete account"
+            setTextColor(ContextCompat.getColor(this@SettingsActivity, R.color.danger))
+            textSize = 13f
+            gravity = Gravity.CENTER
+            setPadding(0, pad, 0, pad)
+            setOnClickListener { confirmDeleteAccount() }
+        }
+        parent.addView(
+            delete,
+            parent.indexOfChild(logout) + 1,
+            ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+        )
+    }
+
+    private fun confirmDeleteAccount() {
+        val input = EditText(this).apply {
+            hint = "Password (leave blank if you signed in with Google)"
+            inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+        }
+        val pad = (20 * resources.displayMetrics.density).toInt()
+        val container = LinearLayout(this).apply {
+            setPadding(pad, pad / 2, pad, 0)
+            addView(input, LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT))
+        }
+
+        AlertDialog.Builder(this)
+            .setTitle("Delete your account?")
+            .setMessage("This permanently deletes your profile, uploads, messages, notes and events. It cannot be undone.")
+            .setView(container)
+            .setPositiveButton("Delete") { _, _ -> deleteAccount(input.text.toString()) }
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
+    }
+
+    private fun deleteAccount(password: String) {
+        lifecycleScope.launch {
+            try {
+                val response = RetrofitClient.getInstance(this@SettingsActivity)
+                    .deleteAccount(DeleteAccountRequest(password.ifEmpty { null }))
+                if (response.isSuccessful) {
+                    withContext(Dispatchers.IO) { AppDatabase.getInstance(this@SettingsActivity).clearAllTables() }
+                    SessionManager(this@SettingsActivity).clear()
+                    GoogleSignInHelper.signOut(this@SettingsActivity)
+                    toast("Your account has been deleted")
+                    goToLogin()
+                } else {
+                    val raw = response.errorBody()?.string()
+                    val msg = try { org.json.JSONObject(raw ?: "").optString("error", "") } catch (e: Exception) { "" }
+                    toast(if (msg.isNotEmpty()) msg else "Could not delete account (${response.code()})")
+                }
+            } catch (e: Exception) {
+                toast("Could not reach the server - check your connection")
+            }
+        }
     }
 
     private fun loadRemotePrivacy(tvCurrentPrivacy: TextView) {
@@ -83,9 +146,7 @@ class SettingsActivity : AppCompatActivity() {
                     val privacy = response.body()?.privacy ?: "public"
                     tvCurrentPrivacy.text = if (privacy == "private") getString(R.string.privacy_private) else getString(R.string.privacy_public)
                 }
-            } catch (_: Exception) {
-                // offline — leave the default shown
-            }
+            } catch (_: Exception) { }
         }
     }
 
@@ -100,15 +161,14 @@ class SettingsActivity : AppCompatActivity() {
                 val code = codes[which]
                 LocaleHelper.setLanguage(this, code)
                 tvCurrentLanguage.text = LocaleHelper.displayNameFor(code)
-
                 lifecycleScope.launch {
                     try {
                         RetrofitClient.getInstance(this@SettingsActivity)
                             .updateSettings(SettingsUpdateRequest(language = code))
-                    } catch (_: Exception) { /* will sync next time online */ }
+                    } catch (_: Exception) { }
                 }
                 dialog.dismiss()
-                recreate() // re-apply resources for the newly selected locale
+                recreate()
             }
             .setNegativeButton(android.R.string.cancel, null)
             .show()
@@ -139,17 +199,18 @@ class SettingsActivity : AppCompatActivity() {
         AlertDialog.Builder(this)
             .setTitle(R.string.choose_privacy)
             .setSingleChoiceItems(labels, current) { dialog, which ->
-                val privacy = options[which]
                 tvCurrentPrivacy.text = labels[which]
                 lifecycleScope.launch {
                     try {
                         RetrofitClient.getInstance(this@SettingsActivity)
-                            .updateSettings(SettingsUpdateRequest(privacy = privacy))
-                    } catch (_: Exception) { /* will sync next time online */ }
+                            .updateSettings(SettingsUpdateRequest(privacy = options[which]))
+                    } catch (_: Exception) { }
                 }
                 dialog.dismiss()
             }
             .setNegativeButton(android.R.string.cancel, null)
             .show()
     }
+
+    private fun toast(msg: String) = Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
 }

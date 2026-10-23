@@ -135,3 +135,6 @@ data class SummarizeResponse(val summary: String)
 data class AskRequest(val question: String)
 data class AskResponse(val answer: String)
 data class RecommendationsResponse(val recommendations: List<String>)
+
+
+data class DeleteAccountRequest(val password: String? = null)
