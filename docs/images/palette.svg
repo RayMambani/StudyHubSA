@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="210" viewBox="0 0 1000 210">
+  <rect width="1000" height="210" fill="#ffffff"/>
+  <rect x="20" y="20" width="170" height="110" rx="14" fill="#1E3A5F"/>
+  <rect x="220" y="20" width="170" height="110" rx="14" fill="#3FA34D"/>
+  <rect x="420" y="20" width="170" height="110" rx="14" fill="#E0A526"/>
+  <rect x="620" y="20" width="170" height="110" rx="14" fill="#F5F3ED" stroke="#DCD6C6" stroke-width="2"/>
+  <rect x="820" y="20" width="170" height="110" rx="14" fill="#1C2430"/>
+  <g font-family="Arial, sans-serif" fill="#1C2430" text-anchor="middle">
+    <text x="105" y="158" font-size="17" font-weight="bold">Academic Navy</text>
+    <text x="105" y="180" font-size="15">#1E3A5F</text>
+    <text x="305" y="158" font-size="17" font-weight="bold">Growth Green</text>
+    <text x="305" y="180" font-size="15">#3FA34D</text>
+    <text x="505" y="158" font-size="17" font-weight="bold">Achievement Gold</text>
+    <text x="505" y="180" font-size="15">#E0A526</text>
+    <text x="705" y="158" font-size="17" font-weight="bold">Paper</text>
+    <text x="705" y="180" font-size="15">#F5F3ED</text>
+    <text x="905" y="158" font-size="17" font-weight="bold">Ink</text>
+    <text x="905" y="180" font-size="15">#1C2430</text>
+  </g>
+</svg>
