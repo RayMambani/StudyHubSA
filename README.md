@@ -75,17 +75,16 @@ University students, college students, distance-learning students, tutors and st
   <tr>
     <td align="center" valign="top" width="25%"><img src="docs/screenshots/01-login.png" width="180" alt="Login"><br><sub>Login with Google single sign-on</sub></td>
     <td align="center" valign="top" width="25%"><img src="docs/screenshots/03-library.png" width="180" alt="Dashboard"><br><sub>Dashboard with streak and upcoming events</sub></td>
-    <td align="center" valign="top" width="25%"><img src="docs/screenshots/04-group-chat.png" width="180" alt="Group chat"><br><sub>Study group chat</sub></td>
-    <td align="center" valign="top" width="25%"><img src="docs/screenshots/05-calendar.png" width="180" alt="Academic calendar"><br><sub>Academic calendar</sub></td>
+    <td align="center" valign="top" width="25%"><img src="docs/screenshots/04-group-chat.png" width="180" alt="Resource Library"><br><sub>Resource Library</sub></td>
+    <td align="center" valign="top" width="25%"><img src="docs/screenshots/05-calendar.png" width="180" alt="Group chat"><br><sub>Study group chat</sub></td>
   </tr>
   <tr>
-    <td align="center" valign="top" width="25%"><img src="docs/screenshots/06-ai-assist.png" width="180" alt="AI Study Assist"><br><sub>AI Study Assist</sub></td>
-    <td align="center" valign="top" width="25%"><img src="docs/screenshots/07-profile.png" width="180" alt="Profile and badges"><br><sub>Profile, points and badges</sub></td>
-    <td align="center" valign="top" width="25%"><img src="docs/screenshots/08-settings-dark.png" width="180" alt="Settings in dark mode"><br><sub>Settings in dark mode</sub></td>
-    <td align="center" valign="top" width="25%"><img src="docs/screenshots/09-github-actions.png" width="180" alt="GitHub Actions"><br><sub>GitHub Actions run</sub></td>
+    <td align="center" valign="top" width="25%"><img src="docs/screenshots/06-ai-assist.png" width="180" alt="Academic calendar"><br><sub>Academic calendar</sub></td>
+    <td align="center" valign="top" width="25%"><img src="docs/screenshots/07-profile.png" width="180" alt="AI Study Assist"><br><sub>AI Study Assist</sub></td>
+    <td align="center" valign="top" width="25%"><img src="docs/screenshots/08-settings-dark.png" width="180" alt="Profile and badges"><br><sub>Profile, points and badges</sub></td>
+    <td align="center" valign="top" width="25%"><img src="docs/screenshots/09-github-actions.png" width="180" alt="Settings in dark mode"><br><sub>Settings in dark mode</sub></td>
   </tr>
 </table>
-
 ---
 
 ## 3. Features
