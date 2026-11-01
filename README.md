@@ -14,7 +14,7 @@
 
 > **One app for everything a South African student needs to study together.**
 
-**Author:** Makhadzi Mambani | **Student number:** [add your student number] | **Module:** Open Source Coding (S2) | **Institution:** The Independent Institute of Education (IIE)
+**Author:** Makhadzi Rachel Mambani
 
 **Backend repository:** [RayMambani/studyhub-sa-backend](https://github.com/RayMambani/studyhub-sa-backend) | **Live API:** https://studyhub-sa-backend.onrender.com
 
