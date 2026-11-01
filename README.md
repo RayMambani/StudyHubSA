@@ -29,7 +29,7 @@
 5. [Architecture and technology](#5-architecture-and-technology)
 6. [GitHub and GitHub Actions](#6-github-and-github-actions)
 7. [Getting started](#7-getting-started)
-8. [Release notes](#release-notes)
+8. [Release notes](#8-release-notes)
 9. [Limitations and future work](#9-limitations-and-future-work)
 
 ---
@@ -73,19 +73,16 @@ University students, college students, distance-learning students, tutors and st
 
 <table>
   <tr>
-    <td align="center"><img src="docs/screenshots/01-login.png" width="200" alt="Login"><br><sub>Login with Google single sign-on</sub></td>
-    <td align="center"><img src="docs/screenshots/02-dashboard.png" width="200" alt="Dashboard"><br><sub>Dashboard with streak and upcoming events</sub></td>
-    <td align="center"><img src="docs/screenshots/03-library.png" width="200" alt="Resource Library"><br><sub>Resource Library</sub></td>
+    <td align="center" valign="top" width="25%"><img src="docs/screenshots/01-login.png" width="180" alt="Login"><br><sub>Login with Google single sign-on</sub></td>
+    <td align="center" valign="top" width="25%"><img src="docs/screenshots/03-library.png" width="180" alt="Dashboard"><br><sub>Dashboard with streak and upcoming events</sub></td>
+    <td align="center" valign="top" width="25%"><img src="docs/screenshots/04-group-chat.png" width="180" alt="Group chat"><br><sub>Study group chat</sub></td>
+    <td align="center" valign="top" width="25%"><img src="docs/screenshots/05-calendar.png" width="180" alt="Academic calendar"><br><sub>Academic calendar</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="docs/screenshots/04-group-chat.png" width="200" alt="Group chat"><br><sub>Study group chat</sub></td>
-    <td align="center"><img src="docs/screenshots/05-calendar.png" width="200" alt="Academic calendar"><br><sub>Academic calendar</sub></td>
-    <td align="center"><img src="docs/screenshots/06-ai-assist.png" width="200" alt="AI Study Assist"><br><sub>AI Study Assist</sub></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="docs/screenshots/07-profile.png" width="200" alt="Profile and badges"><br><sub>Profile, points and badges</sub></td>
-    <td align="center"><img src="docs/screenshots/08-settings-dark.png" width="200" alt="Settings in dark mode"><br><sub>Settings in dark mode</sub></td>
-    <td align="center"><img src="docs/screenshots/09-github-actions.png" width="200" alt="GitHub Actions"><br><sub>GitHub Actions run</sub></td>
+    <td align="center" valign="top" width="25%"><img src="docs/screenshots/06-ai-assist.png" width="180" alt="AI Study Assist"><br><sub>AI Study Assist</sub></td>
+    <td align="center" valign="top" width="25%"><img src="docs/screenshots/07-profile.png" width="180" alt="Profile and badges"><br><sub>Profile, points and badges</sub></td>
+    <td align="center" valign="top" width="25%"><img src="docs/screenshots/08-settings-dark.png" width="180" alt="Settings in dark mode"><br><sub>Settings in dark mode</sub></td>
+    <td align="center" valign="top" width="25%"><img src="docs/screenshots/09-github-actions.png" width="180" alt="GitHub Actions"><br><sub>GitHub Actions run</sub></td>
   </tr>
 </table>
 
@@ -115,7 +112,7 @@ University students, college students, distance-learning students, tutors and st
 | :fire: **Study Streak Tracker** | Daily login streak with fire-emoji levels |
 | :robot: **AI Study Assist** | Summaries, Q&A and recommendations powered by Google Gemini, with an automatic fallback |
 
-The full explanation of each is in the [release notes](#release-notes).
+The full explanation of each is in the [release notes](#8-release-notes).
 
 ---
 
@@ -309,7 +306,9 @@ To see the results, open the **Actions** tab of either repository. Every run sho
 
 To run your own backend, see the [backend repository](https://github.com/RayMambani/studyhub-sa-backend). It needs these environment variables: `JWT_SECRET`, `TURSO_DATABASE_URL`, `TURSO_AUTH_TOKEN`, `GOOGLE_CLIENT_ID`, `GEMINI_API_KEY`, `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY` and `CLOUDINARY_API_SECRET`.
 
-## Release Notes
+---
+
+## 8. Release notes
 
 ### Version 1.0.0 - Final PoE release (October 2026)
 
