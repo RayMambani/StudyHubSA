@@ -409,4 +409,8 @@ Registration and login with hashed passwords, a settings screen, a REST API conn
 
 Built for the IIE Open Source Coding (S2) module. Thanks to the open-source libraries that make this possible: Retrofit, OkHttp, Room, WorkManager, Glide, Firebase, Express, Jest, Supertest and bcrypt.
 
+## YouTube Video Link
+https://youtu.be/lg1UAvskBSw?si=kxr79DlY-HR2d2VA
+
+
 <p align="center"><sub>Made in South Africa, for South African students.</sub></p>
